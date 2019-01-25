@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+<script>
+    function Temperature(temC) {
+        this.temC = temC;
+        this.convertTemCToTemF = convertTemCToTemF;
+        this.convertTemCToTemK = convertTemCToTemK;
+
+    }
+
+    function convertTemCToTemF() {
+        return (1.8 * this.temC + 32);
+    }
+
+    function convertTemCToTemK() {
+       return (this.temC +273.15);
+    }
+
+    let tempC = 25 ;
+    let obj1 = new Temperature(tempC);
+    document.write(tempC + " độ C = " + obj1.convertTemCToTemF() + " độ F = " + obj1.convertTemCToTemK() + " độ K");
+</script>
+</body>
+</html>
